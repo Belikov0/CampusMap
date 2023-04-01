@@ -8,6 +8,12 @@ GuidingWidget::GuidingWidget(QWidget *parent) :
     ui->setupUi(this);
 }
 
+GuidingWidget::GuidingWidget(CampusMap *_map, QWidget *parent)
+{
+    GuidingWidget();
+    setMap(_map);
+}
+
 GuidingWidget::~GuidingWidget()
 {
     delete ui;

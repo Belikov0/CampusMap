@@ -8,6 +8,12 @@ SearchRouteWidget::SearchRouteWidget(QWidget *parent) :
     ui->setupUi(this);
 }
 
+SearchRouteWidget::SearchRouteWidget(CampusMap *_map, QWidget *parent)
+{
+    SearchRouteWidget();
+    setMap(_map);
+}
+
 SearchRouteWidget::~SearchRouteWidget()
 {
     delete ui;

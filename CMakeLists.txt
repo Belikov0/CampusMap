@@ -35,6 +35,9 @@ set(PROJECT_SOURCES
         rectifymapwidget.cpp
         rectifymapwidget.h
         rectifymapwidget.ui
+        mapdata.h
+        mapdata.cpp
+        mapdata.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -3,17 +3,19 @@
 
 #include <QWidget>
 #include <string>
+#include "mapdata.h"
 using namespace std;
 
 namespace Ui {
 class SearchBuildingWidget;
 }
 
-class SearchBuildingWidget : public QWidget
+class SearchBuildingWidget : public QWidget, public MapData
 {
     Q_OBJECT
 public:
     explicit SearchBuildingWidget(QWidget *parent = nullptr);
+    SearchBuildingWidget(CampusMap* _map, QWidget *parent = nullptr);
     ~SearchBuildingWidget();
 
 private slots:

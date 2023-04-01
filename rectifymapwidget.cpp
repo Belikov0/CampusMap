@@ -8,6 +8,12 @@ RectifyMapWidget::RectifyMapWidget(QWidget *parent) :
     ui->setupUi(this);
 }
 
+RectifyMapWidget::RectifyMapWidget(CampusMap *_map, QWidget *parent)
+{
+    RectifyMapWidget();
+    setMap(_map);
+}
+
 RectifyMapWidget::~RectifyMapWidget()
 {
     delete ui;
