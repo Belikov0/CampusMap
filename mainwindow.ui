@@ -14,43 +14,64 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>140</y>
+      <width>241</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="searchBuildingPushButton">
+       <property name="text">
+        <string>查询建筑</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="rectifyMapPushButton">
+       <property name="text">
+        <string>修改地图</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="searchRoutePushButton">
+       <property name="text">
+        <string>搜索路线</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="guidingPushButton">
+       <property name="text">
+        <string>游园导航</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>260</y>
-      <width>80</width>
-      <height>21</height>
+      <y>60</y>
+      <width>241</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="text">
-     <string>查询建筑</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>260</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>18</pointsize>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="text">
-     <string>修改地图</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>260</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>路线导航</string>
+     <string>欢迎使用民大校园地图</string>
     </property>
    </widget>
   </widget>
@@ -60,7 +81,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>

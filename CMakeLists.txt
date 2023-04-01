@@ -21,10 +21,20 @@ set(PROJECT_SOURCES
         mainwindow.ui
         matgraph.cpp
         matgraph.h
-        sqstring.h
-        sqstring.cpp
         vertextype.cpp
         vertextype.h
+        searchbuildingwidget.cpp
+        searchbuildingwidget.h
+        searchbuildingwidget.ui
+        searchroutewidget.cpp
+        searchroutewidget.h
+        searchroutewidget.ui
+        guidingwidget.cpp
+        guidingwidget.h
+        guidingwidget.ui
+        rectifymapwidget.cpp
+        rectifymapwidget.h
+        rectifymapwidget.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

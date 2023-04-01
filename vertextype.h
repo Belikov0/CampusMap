@@ -2,6 +2,7 @@
 #define VERTEXTYPE_H
 #define MAXFACILITIES 10
 #include <string>
+#include <QString>
 #include <iostream>
 using namespace std;
 
@@ -31,6 +32,8 @@ public:
 
     //给该建筑添加设施
     VertexType* addFacility(string _facilityName);
+
+    bool delFacility(string _facilityName);
 
     //判断该设施是否属于该建筑
     bool isInclude(string _facilityName)const;

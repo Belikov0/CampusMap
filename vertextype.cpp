@@ -52,7 +52,16 @@ string VertexType::getBuildingName()const
 VertexType* VertexType::addFacility(string _facilityName)
 {
     this->facilities[facilityNumber++] = _facilityName;
+    //用于链式调用
     return this;
+}
+
+bool VertexType::delFacility(string _facilityName)
+{
+    if (facilityNumber == 0)
+        return true;
+    facilityNumber--;
+    return true;
 }
 
 bool VertexType::isInclude(string _facilityName) const
@@ -75,7 +84,7 @@ void VertexType::showInnerMessage()const
     string s = "建筑名：\n\t" + this->getBuildingName()
             + "\n拥有设施: \n";
     for (int i = 0; i < this->facilityNumber; i++){
-        s += "\t" + this->facilities[i] + "\n";
+        s += string("\t" + this->facilities[i] + "\n");
     }
     cout << s;
 }

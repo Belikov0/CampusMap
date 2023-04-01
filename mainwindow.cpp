@@ -14,3 +14,35 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_searchBuildingPushButton_clicked()
+{
+    SearchBuildingWidget* s = new SearchBuildingWidget();
+    s->show();
+}
+
+
+void MainWindow::on_rectifyMapPushButton_clicked()
+{
+    RectifyMapWidget* r = new RectifyMapWidget();
+    r->show();
+}
+
+
+
+
+void MainWindow::on_searchRoutePushButton_clicked()
+{
+    SearchRouteWidget* s = new SearchRouteWidget();
+    s->show();
+}
+
+
+
+
+void MainWindow::on_guidingPushButton_clicked()
+{
+    GuidingWidget* g = new GuidingWidget();
+    g->show();
+}
+
