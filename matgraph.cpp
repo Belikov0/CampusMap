@@ -53,39 +53,43 @@ string MatGraph::getBuildingNameByNumber(int _no)
     return this->buildings[_no]->getBuildingName();
 }
 
-void MatGraph::findBuildingByBuildingName(string _buildingName)
+vector<string> MatGraph::findBuildingByBuildingName(string _buildingName)
 {
     int id = this->getBuildingIdByName(_buildingName);
-    showMessage(id);
+    return showMessage(id);
 }
 
-void MatGraph::findBuildingByBuildingId(int _id)
+vector<string> MatGraph::findBuildingByBuildingId(int _id)
 {
-    showMessage(_id);
+    return showMessage(_id);
 }
 
-void MatGraph::findBuildingByfacility(string _facilityName)
+vector<string> MatGraph::findBuildingByfacility(string _facilityName)
 {
     for (int i = 0; i < this->buildingNumber; i++){
         if (this->buildings[i]->isInclude(_facilityName)){
             int no = i;
-            showMessage(no);
+            return showMessage(no);
         }
     }
+    return vector<string>();
 }
 
-void MatGraph::showMessage(int _id)
+vector<string> MatGraph::showMessage(int _id)
 {
+    if (_id == -1)
+        return vector<string>();
+    vector<string> res = vector<string>(this->buildings[_id]->innerMessage());
     //显示建筑自身的信息
-    this->buildings[_id]->showInnerMessage();
     //搜索图，显示路径信息
     string s = "可通往的建筑：\n";
     for (int i = 0; i < buildingNumber; i++){
         if (this->roads[_id][i] != INF && this->roads[_id][i] != 0){
-            s += ("\t" + this->getBuildingNameByNumber(i) + "\t距离：" + to_string(this->roads[_id][i]) + "\n");
+            s += ("    " + this->getBuildingNameByNumber(i) + "    距离：" + to_string(this->roads[_id][i]) + "\n");
         }
     }
-    cout << s;
+    res.push_back(s);
+    return res;
 
 }
 

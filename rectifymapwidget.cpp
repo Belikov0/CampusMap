@@ -10,6 +10,7 @@ RectifyMapWidget::RectifyMapWidget(QWidget *parent) :
 
 RectifyMapWidget::RectifyMapWidget(CampusMap *_map, QWidget *parent)
 {
+
     RectifyMapWidget();
     setMap(_map);
 }

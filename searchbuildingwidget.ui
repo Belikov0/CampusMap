@@ -41,6 +41,46 @@
     <string>请输入建筑名称:</string>
    </property>
   </widget>
+  <widget class="QComboBox" name="conditionComboBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>按建筑名称</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>按设施名称</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTextBrowser" name="innerMessageTextBrowser">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>151</width>
+     <height>141</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="outerMessageTextBrowser">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>110</y>
+     <width>261</width>
+     <height>141</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

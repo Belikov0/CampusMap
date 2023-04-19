@@ -44,7 +44,7 @@ public:
 
 
     //显示建筑本身的信息
-    void showInnerMessage()const;
+    vector<string> innerMessage()const;
 }Building;
 
 #endif // VERTEXTYPE_H

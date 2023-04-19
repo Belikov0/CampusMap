@@ -31,6 +31,7 @@ private slots:
     void on_guidingPushButton_clicked();
 
 private:
+    CampusMap* map;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

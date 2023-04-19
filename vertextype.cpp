@@ -78,13 +78,16 @@ int VertexType::getNumber() const
     return this->no;
 }
 
-void VertexType::showInnerMessage()const
+vector<string> VertexType::innerMessage()const
 {
+    vector<string> res;
+
     //拼接字符串
-    string s = "建筑名：\n\t" + this->getBuildingName()
+    string s = "建筑名：\n    " + this->getBuildingName()
             + "\n拥有设施: \n";
     for (int i = 0; i < this->facilityNumber; i++){
-        s += string("\t" + this->facilities[i] + "\n");
+        s += string("    " + this->facilities[i] + "\n");
     }
-    cout << s;
+    res.push_back(s);
+    return res;
 }

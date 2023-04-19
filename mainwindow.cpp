@@ -52,25 +52,8 @@ MainWindow::MainWindow(QWidget *parent)
         {0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0},    //9
         {0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0},    //10
     };
-    CampusMap* m = new CampusMap(roadMessage, 11, 10, buildings);
-//    m->findBuildingByBuildingName("聚雅餐厅");
-//    m->insertRoad("聚雅餐厅", "学生活动中心", 8);
-//    m->findBuildingByBuildingName("聚雅餐厅");
-//    m->deleteRoad("聚雅餐厅", "学生活动中心");
-//    m->findBuildingByBuildingName("聚雅餐厅");
-//    m->findBuildingByBuildingName("商业街");
-//    m->findBuildingByfacility("洗衣房");
-//    m->findBuildingByBuildingName("学生活动中心");
-//    m->findBuildingByBuildingName("图书馆");
-      m->findBuildingByBuildingName("日新楼");
+    map = new CampusMap(roadMessage, 11, 10, buildings);
 
-//      m->deleteBuilding("致远楼");
-      m->deleteBuilding("日新楼");
-
-//    m->getPaths("图书馆", "学生活动中心");
-
-      m->guidingRoute("图书馆");
-//    m->insertBuilding()
 
 }
 
@@ -82,7 +65,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_searchBuildingPushButton_clicked()
 {
-    SearchBuildingWidget* s = new SearchBuildingWidget();
+    SearchBuildingWidget* s = new SearchBuildingWidget(this->map);
     s->show();
 }
 

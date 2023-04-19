@@ -35,13 +35,13 @@ public:
 
 //根据不同的属性来查询建筑物的信息，显示该建筑可以通向的其它建筑以及距离
     //根据建筑名字查找
-    void findBuildingByBuildingName(string _buildingName);
+    vector<string> findBuildingByBuildingName(string _buildingName);
     //根据建筑编号查找
-    void findBuildingByBuildingId(int _no);
-    //根据建筑所含设施查找（重点实现）
-    void findBuildingByfacility(string _facilityName);
+    vector<string> findBuildingByBuildingId(int _no);
+    //根据建筑所含设施查找
+    vector<string> findBuildingByfacility(string _facilityName);
     //根据建筑的名字，在图中搜索所有的路径以及结点
-    void showMessage(int _no);
+    vector<string> showMessage(int _no);
 
 //插入建筑或者路径
     //使用建筑名和其属性插入
